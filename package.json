@@ -1,0 +1,29 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@inertiajs/vue3": "^2.0.8",
+        "@tailwindcss/forms": "^0.5.3",
+        "@vitejs/plugin-vue": "^5.0.0",
+        "autoprefixer": "^10.4.12",
+        "axios": "^1.6.4",
+        "crypto-browserify": "^3.12.1",
+        "deepmerge": "^4.3.1",
+        "laravel-vite-plugin": "^1.0.0",
+        "postcss": "^8.4.31",
+        "qs": "^6.11.2",
+        "tailwindcss": "^3.2.1",
+        "vite": "^5.0.0",
+        "vue": "^3.4.0"
+    },
+    "dependencies": {
+        "@headlessui/vue": "^1.7.23",
+        "@inertiajs/core": "^2.0.8",
+        "pinia": "^3.0.2",
+        "ziggy-js": "^2.5.2"
+    }
+}
