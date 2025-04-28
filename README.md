@@ -39,7 +39,11 @@ A task management system built with Laravel 10 and Vue.js 3.
 1. Clone the repository:
 ```bash
 git clone https://github.com/nathanbobato/tasks-management.git
-cd task-manager
+```
+
+Go to the folder with the code:
+```
+cd tasks-management
 ```
 
 2. Copy the environment file:
