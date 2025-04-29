@@ -30,7 +30,7 @@ A task management system built with Laravel 10 and Vue.js 3.
 - PostgreSQL 15
 - Node.js 20+
 - Composer
-- Docker (optional)
+- Docker (Recommended)
 
 ## Installation
 
@@ -51,30 +51,46 @@ cd tasks-management
 cp .env.example .env
 ```
 
-3. Start the containers:
+3. Run docker build:
+```bash
+docker compose build --no-cache
+```
+
+4. Start the containers:
 ```bash
 docker-compose up -d
 ```
 
-4. Install dependencies:
+5. Install dependencies:
 ```bash
 docker-compose exec app composer install
 docker-compose exec app npm install
 ```
 
-5. Generate application key:
+6. Update the database configuration in .env:
+```
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=task_manager
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
+```
+
+7. Generate application key:
 ```bash
 docker-compose exec app php artisan key:generate
 ```
 
-6. Run migrations and seeders:
+8. Run migrations and seeders:
 ```bash
 docker-compose exec app php artisan migrate --seed
 ```
 
-7. Build assets:
+9. If you are using Linux run:
 ```bash
-docker-compose exec app npm run build
+chmod -R 777 .
+```
 ```
 
 The application will be available at http://localhost:8000
@@ -147,14 +163,6 @@ The test suite includes:
 - Feature tests for the TaskController
 - Authentication tests
 - Form validation tests
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 
