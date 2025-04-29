@@ -91,7 +91,6 @@ docker-compose exec app php artisan migrate --seed
 ```bash
 chmod -R 777 .
 ```
-```
 
 The application will be available at http://localhost:8000
 
